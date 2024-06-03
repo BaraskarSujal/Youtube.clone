@@ -1,0 +1,123 @@
+p{
+    margin-top:0;
+    margin-bottom:0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.video-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap:20px;
+    row-gap: 40px;
+
+}
+/*for responsive design*/
+@media (max-width:750px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width:751px) and (max-width:999px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+}
+@media (min-width:1000px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+.thumbnail-row{
+margin-bottom:8px;
+position:relative;
+}
+
+.time{
+    position:absolute;
+    bottom:10px ;
+    right:8px;
+    background-color: black;
+    color:white;
+    font-family:Robot,arial;
+    font-size:12px;
+    font-weight:500;
+    padding:4px 4px 4px 4px;
+    border-radius:2px;
+}
+.thumb{
+    width:100%;
+}
+.video-info-grid{
+    display:grid;
+    grid-template-columns: 50px 1fr;
+}
+.channel-picture{
+    position:relative;
+    height:85.6px;
+}
+.channel-picture .channel-info-overlay{
+    position:absolute;
+    bottom:-30px;
+    display:flex;
+    height: 70px;
+    align-items: center;
+    background-color:white;
+    width:240px;
+    border-radius: 7px;
+    z-index:1;
+    opacity: 0;
+    transition:opacity 0.20s;
+    pointer-events: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: Roboto,Arial;
+}
+.channel-picture:hover .channel-info-overlay{
+    opacity: 1;
+}
+.video-info-grid .channel-picture .channel-info-overlay img{
+    width:50px;
+    border-radius: 25px;
+    margin-left:10px;
+    margin-right:10px;
+}
+.video-info-grid .channel-picture .channel-info-overlay .overlay-channel-name{
+    width:200px;
+}
+.video-info-grid .channel-picture .channel-info-overlay .p1{
+    font-size: 18px;
+    font-weight:bolder;
+}
+.video-info-grid .channel-picture .channel-info-overlay .p2{
+    font-size:12px;
+     
+    color:rgb(110, 105, 105)
+}
+
+.profile-picture{
+width:36px;
+border-radius:20px;
+
+}
+
+.video-title{
+font-size:14px;
+
+margin-bottom:10px;
+font-weight: 500;
+}
+@media(min-width:1000px){
+    .video-title{
+            font-size:16px;
+            line-height:24px;
+    }
+    .video-author,.video-stats{
+        font-size:14px;}
+}
+.video-author,.video-stats{
+font-size:10px;
+color: #606060;
+}
+.video-author{
+margin-bottom:2px;
+}
